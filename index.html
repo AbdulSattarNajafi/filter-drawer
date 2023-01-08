@@ -12,15 +12,20 @@
     <div class="filter-container">
         <div class="filter__modal">
             <div class="filter__header">
-                <button type="button" class="filter__header-btn go-back-btn">
-                    <span class="filter__header-icon">&#10094;</span>
-                    <span>Back</span>
-                </button>
+                <div class="filter__header-button go-back-button">
+                    <button type="button" class="filter__header-btn"
+                    id="go-back-btn">
+                        &#10094;
+                    </button>
+                    <p>Back</p>
+                </div>
 
-                <button type="button" class="filter__header-btn" id="close-filter-btn">
-                    <span class="filter__header-icon">&times;</span>
-                    <span>Close Filter</span>
-                </button>
+                <div class="filter__header-button">
+                    <button type="button" class="filter__header-btn" id="close-filter-btn">
+                        &times;
+                    </button>
+                    <p>Close Filter</p>
+                </div>
             </div>
 
             <div class="filter__body">

@@ -34,8 +34,6 @@ const closeMove = (event) => {
     if (marker < 0) marker = 0;
 
     filterPopup.style.transform = `translateY(${marker}px)`;
-
-    console.log('parent Clicked');
 };
 
 const closeEnd = (event) => {

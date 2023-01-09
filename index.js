@@ -1,10 +1,12 @@
 // Show & Hide filter drawer
 const filterBtn = document.getElementById('filter-btn');
 const closeFilterBtn = document.getElementById('close-filter-btn');
+const filterOverlay = document.querySelector('.filter-backdrop');
 const filterPopup = document.querySelector('.filter-container');
 
 filterBtn.addEventListener('click', showFilterPopup);
 closeFilterBtn.addEventListener('click', hideFilterPopup);
+filterOverlay.addEventListener('click', hideFilterPopup);
 
 // Define touch variables
 let x1, y1;
@@ -57,10 +59,12 @@ function hideDrawerOnpushingDown(ele) {
 }
 
 function showFilterPopup() {
+    filterOverlay.classList.add('show');
     filterPopup.classList.add('show');
 }
 
 function hideFilterPopup() {
+    filterOverlay.classList.remove('show');
     filterPopup.classList.remove('show');
     setTimeout(() => {
         filterPopup.style.transform = `translateY(0px)`;
@@ -111,15 +115,21 @@ searchInput.addEventListener('keypress', (e) => {
 });
 
 // Preventing Touch Push on some Elements
-const resetBtn = document.querySelector('.filter__reset-btn');
+const resetBtn = document.querySelector('#filter__reset-btn');
+const occationFilter = document.querySelector('.filter__occasion');
 
 preventTouchMove(resetBtn);
 preventTouchMove(searchInput);
-preventTouchMove(goBackBTn);
-preventTouchMove(closeFilterBtn);
+preventTouchMove(occationFilter);
 
 function preventTouchMove(ele) {
+    ele.addEventListener('touchstart', (e) => {
+        e.stopPropagation();
+    });
     ele.addEventListener('touchmove', (e) => {
+        e.stopPropagation();
+    });
+    ele.addEventListener('touchend', (e) => {
         e.stopPropagation();
     });
 }

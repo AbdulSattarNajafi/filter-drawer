@@ -116,11 +116,13 @@ searchInput.addEventListener('keypress', (e) => {
 
 // Preventing Touch Push on some Elements
 const resetBtn = document.querySelector('#filter__reset-btn');
-const occationFilter = document.querySelector('.filter__occasion');
+const filterForms = document.querySelectorAll('.filter__form');
 
+filterForms.forEach((form) => {
+    preventTouchMove(form);
+});
 preventTouchMove(resetBtn);
 preventTouchMove(searchInput);
-preventTouchMove(occationFilter);
 
 function preventTouchMove(ele) {
     ele.addEventListener('touchstart', (e) => {

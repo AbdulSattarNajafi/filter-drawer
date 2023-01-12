@@ -18,16 +18,23 @@ body {
     padding: 0;
     background: #ffffff;
     height: 3000px;
+    overscroll-behavior: none;
 }
 
 .sticky-nav {
     position: fixed;
     left: 0;
     bottom: 0;
+    display: none;
     width: 100%;
     height: 60px;
     background-color: var(--mobile-header-bg);
     z-index: 999;
+}
+@media (max-width: 1023.98px) {
+    .sticky-nav {
+        display: block;
+    }
 }
 
 /* Ignore the above CSS */
@@ -37,9 +44,6 @@ body {
     display: none;
     background-color: transparent;
     z-index: 888;
-}
-.filter-backdrop.show {
-    display: block;
 }
 
 .filter-container {
@@ -54,10 +58,6 @@ body {
     overflow: hidden;
     transition: height .4s ease-in-out, transform .1s ease;
     z-index: 966;
-}
-.filter-container.show {
-    opacity: 1;
-    height: 450px;
 }
 
 .filter__modal {
@@ -88,16 +88,16 @@ body {
     padding: 15px 18px;
     padding-top: 18px;
 }
-.filter__header.active-filters .filter__header-btn {
-    justify-content: flex-start;
-    width: calc(50% - 1px);
-}
-
 .filter__header-btn.go-back-btn {
     display: none;
     padding-left: 40px;
     margin-right: 2px;
 }
+
+.filter__header.active-filters .filter__header-btn.reset-btn {
+    display: none;
+}
+
 .filter__header.active-filters .filter__header-btn.go-back-btn {
     display: flex;
 }
@@ -123,7 +123,9 @@ body {
 }
 
 .filter__body {
+    position: relative;
     height: 312px;
+    overflow: hidden;
 }
 
 /* ========== Reset ==== */
@@ -224,8 +226,11 @@ body {
     opacity: 1;
 }
 
-.filter__reset-button {
-    padding-top: 36px;
+.filter__hide-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 .filter__form {
@@ -233,6 +238,7 @@ body {
     max-height: 100%;
     padding: 0 34px;
     padding-top: 15px;
+    padding-bottom: 46px;
     overflow-y: auto;
 }
 .filter__form.hide {
@@ -298,6 +304,7 @@ body {
     position: fixed;
     left: 0;
     bottom: 76px;
+    display: none;
     width: 100%;
     z-index: 922;
 }
@@ -325,7 +332,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 160px;
+    width: 162px;
     height: 100%;
     background-color: var(--mobile-header-bg);
     border-radius: 30px;
@@ -352,4 +359,17 @@ body {
 
 .filter__button-icon > span:last-child {
     width: 8px;
+}
+
+@media (max-width: 1023.98px) {
+    .filter-backdrop.show {
+        display: block;
+    }
+    .filter-container.show {
+        opacity: 1;
+        height: 450px;
+    }
+    .filter__button {
+        display: block;
+    }
 }

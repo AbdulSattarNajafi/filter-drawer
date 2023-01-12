@@ -14,22 +14,20 @@
         <div class="filter__modal">
             <div class="filter__header">
                 
-                    <button type="button" class="filter__header-btn go-back-btn"
-                    id="go-back-btn">
-                        <span class="filter__header-icon">
-                            <svg id="icon_bg_back" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_back-2" data-name="icon_bg_back" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_back" class="cls-2" points="22 10.22 19.82 8 10 18 19.82 28 22 25.78 14.36 18 22 10.22"/></svg>
-                        </span>
-                        <span>Back</span>
-                    </button>
+                <button type="button" class="filter__header-btn go-back-btn"
+                id="go-back-btn">
+                    <span class="filter__header-icon">
+                        <svg id="icon_bg_back" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_back-2" data-name="icon_bg_back" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_back" class="cls-2" points="22 10.22 19.82 8 10 18 19.82 28 22 25.78 14.36 18 22 10.22"/></svg>
+                    </span>
+                    <span>Return</span>
+                </button>
                 
-
-                
-                    <button type="button" class="filter__header-btn" id="close-filter-btn">
-                        <span class="filter__header-icon">
-                            <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_close" class="cls-2" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74"/></svg>
-                        </span>
-                        <span>Close Filter</span>
-                    </button>
+                <button type="button" class="filter__header-btn reset-btn" id="filter__reset-btn">
+                    <span class="filter__header-icon">
+                        <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_close" class="cls-2" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74"/></svg>
+                    </span>
+                    <span>Reset Filters</span>
+                </button>
                 
                 <div class="modal__header-line"></div>
             </div>
@@ -80,11 +78,6 @@
                         </div>
                     </form>
 
-                    <div class="filter__reset-button">
-                        <button type="button" class="filter__button-btn" id="filter__reset-btn">
-                            <span class="filter__button-content">Reset Filters</span>
-                        </button>
-                    </div>
                 </div>
 
                 <!-- ============== Filter Sort ============ -->
@@ -342,8 +335,18 @@
                             <span>Item 10</span>
                         </label>
                     </div>
-                    </div>
                 </form>
+
+                <div class="filter__hide-button">
+                    <button type="button" class="filter__button-btn" id="close-filter-btn">
+                        <span class="filter__button-content">
+                            <span class="filter__button-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 298.04"><path fill-rule="nonzero" d="M12.08 70.78c-16.17-16.24-16.09-42.54.15-58.7 16.25-16.17 42.54-16.09 58.71.15L256 197.76 441.06 12.23c16.17-16.24 42.46-16.32 58.71-.15 16.24 16.16 16.32 42.46.15 58.7L285.27 285.96c-16.24 16.17-42.54 16.09-58.7-.15L12.08 70.78z" fill="currentColor"/></svg>
+                            </span>
+                            Hide Filter
+                        </span>
+                    </button>
+                </div>
 
             </div>
 
@@ -359,7 +362,7 @@
                     <span></span>
                     <span></span>
                 </span>
-                <span>Filter</span>
+                <span>Show Filter</span>
             </span>
         </button>
     </div>

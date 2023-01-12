@@ -45,7 +45,11 @@ const closeEnd = (event) => {
     const y2 = touchLocation.clientY;
     const yDiff = y2 - y1;
 
-    if (yDiff > drawerHeight / 4) {
+    // if (yDiff > drawerHeight / 4) {
+    //     hideFilterPopup();
+    // }
+
+    if (yDiff > 14) {
         hideFilterPopup();
     }
 };

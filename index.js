@@ -1,3 +1,63 @@
+// Show & Hide Search on Scroll
+const desktopSearch = document.querySelector('.desktop-search ');
+
+window.addEventListener('scroll', (e) => {
+    console.log(window.scrollY);
+    if (window.scrollY > 550) {
+        desktopSearch.classList.add('show');
+    } else {
+        desktopSearch.classList.remove('show');
+    }
+});
+// Show Desktop Search Button
+const desktopFilterSearchForm = document.querySelector('.desktop-search__form');
+const desktopSearchInput = document.querySelector('#desktop-search-input');
+const desktopSearchBtn = document.querySelector('#desktop-search-btn');
+
+desktopFilterSearchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
+
+desktopSearchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        desktopSearchBtn.classList.add('show');
+    }
+});
+
+// ==================== Desktop Filter ==========================
+const desktopFilter = document.querySelector('.desktop-filter');
+const desktopFilterBtns = document.querySelectorAll('.desktop-filter__buttons-btn');
+const desktopFilterContents = document.querySelectorAll('.desktop-filters');
+const desktopFilterCloseBtns = document.querySelectorAll('.desktop-filter__header-btn');
+
+// Show Desktop filter Drawer & Show and Hide Filter Contents
+desktopFilterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const currentFilter = document.querySelector(`.${btn.dataset.id}`);
+
+        if (!desktopFilter.classList.contains('show')) {
+            desktopFilter.classList.add('show');
+        }
+
+        if (!currentFilter.classList.contains('hide')) return;
+
+        desktopFilterContents.forEach((content) => {
+            content.classList.add('hide');
+        });
+
+        currentFilter.classList.remove('hide');
+    });
+});
+
+// Hide Desktop Filter Drawer
+desktopFilterCloseBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        desktopFilter.classList.remove('show');
+    });
+});
+
+// ==================== Tablet & Mobile Filter ==================
+
 // Show & Hide filter drawer
 const filterBtn = document.getElementById('filter-btn');
 const closeFilterBtn = document.getElementById('close-filter-btn');
@@ -105,8 +165,8 @@ goBackBTn.addEventListener('click', () => {
 
 // Show Search Button
 const filterSearchForm = document.querySelector('.filter__reset-search');
-const searchInput = document.querySelector('.filter__search-input');
-const searchBtn = document.querySelector('.filter__search-btn');
+const searchInput = document.querySelector('#filter-search-input');
+const searchBtn = document.querySelector('#filter-search-btn');
 
 filterSearchForm.addEventListener('submit', (e) => {
     e.preventDefault();

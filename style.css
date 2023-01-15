@@ -36,8 +36,166 @@ body {
         display: block;
     }
 }
-
 /* Ignore the above CSS */
+
+
+/* ================== Desktop Search ================== */
+.desktop-search {
+    position: fixed;
+    left: 50%;
+    top: 76px;
+    transform: translateX(-50%);
+    width: 320px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out;
+    z-index: 444;
+}
+.desktop-search.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktop-search__form {
+    width: 100%;
+}
+
+
+/* ================== Desktop Filter ================== */
+.desktop-filter {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    width: 420px;
+    height: 0;
+    background-color: var(--mobile-header-bg);
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0px -6px 12px -1px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: height .4s ease-in-out, transform .1s ease;
+    z-index: 888;
+}
+.desktop-filter.show {
+    height: 480px;
+}
+
+.desktop-filters.hide {
+    display: none;
+}
+
+.desktop-filter__header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 18px 20px;
+    /* background-color: #9ca86e; */
+    border-radius: 30px 30px 0 0;
+}
+.desktop-filter__header h4 {
+    font-size: 18px;
+    line-height: 30px;
+}
+.desktop-filter__header-btn {
+    position: absolute;
+    top: 18px;
+    right: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: #bfbfbf;
+    border-radius: 50%;
+    color: var(--mobile-header-overlay);
+    cursor: pointer;
+}
+
+.desktop-filter__content {
+    height: 354px;
+    padding-right: 4px;
+    overflow: hidden;
+}
+
+.desktop-filter__content-form {
+    width: 100%;
+    max-height: 100%;
+    padding: 0 30px 34px 34px;
+    overflow-y: auto;
+    scrollbar-width: 4px;
+}
+.desktop-filter__content-form::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: var(--mobile-header-bg);
+    width: 20px;
+}
+
+.desktop-filter__content-form::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: var(--mobile-header-bg);
+}
+
+.desktop-filter__content-form::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #c5c5c5;
+}
+
+/* Buttons */
+.desktop-filter__buttons {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    width: 870px;
+    background-color: var(--mobile-header-bg);
+    transform: translateX(-50%);
+    padding: 10px 0;
+    border-radius: 40px;
+    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.desktop-filter__buttons-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 290px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23px;
+    color: var(--mobile-header-overlay);
+    padding: 8px 28px;
+    cursor: pointer;
+}
+.desktop-filter__buttons-btn:first-child {
+    border-right: 1px solid gray;
+    border-radius: 40px 0 0 40px;
+}
+.desktop-filter__buttons-btn:last-child {
+    border-left: 1px solid gray;
+    border-radius: 0 40px 40px 0;
+}
+.desktop-filter__buttons-text {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 16px;
+}
+.desktop-filter__buttons-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* ================== Tablet & Mobile Filter ================== */
 .filter-backdrop {
     position: fixed;
     inset: 0;
@@ -362,6 +520,17 @@ body {
 }
 
 @media (max-width: 1023.98px) {
+    .desktop-search {
+        display: none;
+    }
+    .desktop-search.show {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .desktop-filter, 
+    .desktop-filter__buttons {
+        display: none;
+    }
     .filter-backdrop.show {
         display: block;
     }

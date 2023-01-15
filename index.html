@@ -8,7 +8,356 @@
     <title>Filter</title>
 </head>
 <body>
+    <!-- ============== Desktop Search ============= -->
+    <div class="desktop-search">
+        <form action="#" class="desktop-search__form">
+            <div class="filter__search">
+                <span class="filter__search-icon">
+                    <svg id="icon_svg_search_parent" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 73 73"><path id="icon_svg_search" d="M56.8,28.75A27.63,27.63,0,0,1,52.3,44.1c-.58.9-.56.89.19,1.64,3.22,3.22,6.44,6.46,9.65,9.68,2.8,2.8,5.61,5.59,8.39,8.39a4.21,4.21,0,0,1,.23,5.91,4.39,4.39,0,0,1-5.28,1.53,4.59,4.59,0,0,1-1.46-1q-7-7-14-13.94c-1.43-1.43-2.88-2.85-4.3-4.29a.68.68,0,0,0-1-.12,26.25,26.25,0,0,1-9,4.08,27.9,27.9,0,0,1-8.2.77,27.36,27.36,0,0,1-12.11-3.52A27.25,27.25,0,0,1,2.92,38.48,27,27,0,0,1,2,22.41,27.67,27.67,0,0,1,21.4,2.31a27.68,27.68,0,0,1,10-1A27,27,0,0,1,44.7,6.1,27.49,27.49,0,0,1,55,19.08,28.44,28.44,0,0,1,56.8,28.75ZM28.92,9.35A19.66,19.66,0,1,0,48.68,28.89,19.67,19.67,0,0,0,28.92,9.35Z" fill="currentColor"/></svg>
+                </span>
+                <input type="text" class="filter__search-input" id="desktop-search-input" placeholder="Search...">
+                <button type="button" class="filter__search-btn" id="desktop-search-btn">
+                    <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_close" class="cls-2" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74"/></svg>
+                </button>
+            </div>
+        </form>
+    </div>
 
+    <!-- ============== Desktop Filter ============= -->
+    <div class="desktop-filter">
+        <!-- Sort by -->
+        <div class="desktop-filters desktop-filter__sort hide">
+            <div class="desktop-filter__header">
+                <h4>Sort by</h4>
+                <button type="button" class="desktop-filter__header-btn">
+                    <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" cx="17.5" cy="17.5" r="17.5" fill="#bfbfbf"/><polygon id="icon_overlay_close" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74" fill="currentColor"/></svg>
+                </button>
+            </div>
+
+            <div class="desktop-filter__content">
+                <form action="#" class="desktop-filter__content-form">
+    
+                    <div class="filter__form-row">
+                        <label for="low-to-high" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="low-to-high">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Low to high</span>
+                        </label>
+                    </div>
+    
+                    <div class="filter__form-row">
+                        <label for="high-to-low" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="high-to-low" checked>
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>High to low</span>
+                        </label>
+                    </div>
+    
+                    <div class="filter__form-row">
+                        <label for="sort-3" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-3">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 3</span>
+                        </label>
+                    </div>
+    
+                    <div class="filter__form-row">
+                        <label for="sort-4" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-4">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 4</span>
+                        </label>
+                    </div>
+    
+                    <div class="filter__form-row">
+                        <label for="sort-5" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-5">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 5</span>
+                        </label>
+                    </div>
+    
+                    <div class="filter__form-row">
+                        <label for="sort-6" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-6">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 6</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="sort-7" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-7">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 7</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="sort-8" class="filter__form-label">
+                            <input type="radio" name="sort-checkbox" class="filter__form-radio" id="sort-8">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Sort 8</span>
+                        </label>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+
+        <!-- Category All -->
+        <div class="desktop-filters desktop-filter__category hide">
+            <div class="desktop-filter__header">
+                <h4>Select Category</h4>
+                <button type="button" class="desktop-filter__header-btn">
+                    <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" cx="17.5" cy="17.5" r="17.5" fill="#bfbfbf"/><polygon id="icon_overlay_close" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74" fill="currentColor"/></svg>
+                </button>
+            </div>
+
+            <div class="desktop-filter__content">
+                <form action="#" class="desktop-filter__content-form">
+                    <div class="filter__form-row">
+                        <label for="all-category" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="all-category" checked>
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>All</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="bouquets" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="bouquets">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Bouquets</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="fresh-flowers" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="fresh-flowers">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Fresh Flowers</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="chocolates" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="chocolates">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Chocolates</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="category-5" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="category-5">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Category 5</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="category-6" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="category-6">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Category 6</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="category-7" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="category-7">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Category 7</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="category-8" class="filter__form-label">
+                            <input type="radio" name="category-checkbox" class="filter__form-radio" id="category-8">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Category 8</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Occasion All -->
+        <div class="desktop-filters desktop-filter__occasion hide">
+            <div class="desktop-filter__header">
+                <h4>Occasion</h4>
+                <button type="button" class="desktop-filter__header-btn">
+                    <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" cx="17.5" cy="17.5" r="17.5" fill="#bfbfbf"/><polygon id="icon_overlay_close" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74" fill="currentColor"/></svg>
+                </button>
+            </div>
+
+            <div class="desktop-filter__content">
+                <form action="#" class="desktop-filter__content-form">
+
+                    <div class="filter__form-row">
+                        <label for="all-occasion" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="all-occasion" checked>
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>All</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-2" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-2">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 2</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-3" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-3">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 3</span>
+                        </label>
+
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-4" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-4">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 4</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-5" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-5">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 5</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-6" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-6">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 6</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-7" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-7">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 7</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-8" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-8">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 8</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-9" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-9">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 9</span>
+                        </label>
+                    </div>
+
+                    <div class="filter__form-row">
+                        <label for="item-10" class="filter__form-label">
+                            <input type="radio" name="occasion-checkbox" class="filter__form-radio" id="item-10">
+                            <div class="filter__form-circle">
+                                <span class="filter__form-dot"></span>
+                            </div>
+                            <span>Item 10</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Filter Buttons -->
+    <div class="desktop-filter__buttons">
+        <!-- Button 1 -->
+        <button type="button" class="desktop-filter__buttons-btn" data-id="desktop-filter__sort">
+            <p>Sort by <span class="desktop-filter__buttons-text">High to Low</span></p>
+            <span class="desktop-filter__buttons-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 298.04"><path fill-rule="nonzero" d="M12.08 70.78c-16.17-16.24-16.09-42.54.15-58.7 16.25-16.17 42.54-16.09 58.71.15L256 197.76 441.06 12.23c16.17-16.24 42.46-16.32 58.71-.15 16.24 16.16 16.32 42.46.15 58.7L285.27 285.96c-16.24 16.17-42.54 16.09-58.7-.15L12.08 70.78z" fill="currentColor"/></svg>
+            </span>
+        </button>
+        <!-- Button 2 -->
+        <button type="button" class="desktop-filter__buttons-btn" data-id="desktop-filter__category">
+            <p>Category <span class="desktop-filter__buttons-text">All</span></p>
+            <span class="desktop-filter__buttons-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 298.04"><path fill-rule="nonzero" d="M12.08 70.78c-16.17-16.24-16.09-42.54.15-58.7 16.25-16.17 42.54-16.09 58.71.15L256 197.76 441.06 12.23c16.17-16.24 42.46-16.32 58.71-.15 16.24 16.16 16.32 42.46.15 58.7L285.27 285.96c-16.24 16.17-42.54 16.09-58.7-.15L12.08 70.78z" fill="currentColor"/></svg>
+            </span>
+        </button>
+        <!-- Button 2 -->
+        <button type="button" class="desktop-filter__buttons-btn" data-id="desktop-filter__occasion">
+            <p>Occasion <span class="desktop-filter__buttons-text">All</span></p>
+            <span class="desktop-filter__buttons-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="8" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 298.04"><path fill-rule="nonzero" d="M12.08 70.78c-16.17-16.24-16.09-42.54.15-58.7 16.25-16.17 42.54-16.09 58.71.15L256 197.76 441.06 12.23c16.17-16.24 42.46-16.32 58.71-.15 16.24 16.16 16.32 42.46.15 58.7L285.27 285.96c-16.24 16.17-42.54 16.09-58.7-.15L12.08 70.78z" fill="currentColor"/></svg>
+            </span>
+        </button>
+    </div>
+
+    <!-- ============== Tablet & Mobile Filter ============= -->
     <div class="filter-backdrop"></div>
     <div class="filter-container">
         <div class="filter__modal">
@@ -71,8 +420,8 @@
                             <span class="filter__search-icon">
                                 <svg id="icon_svg_search_parent" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 73 73"><path id="icon_svg_search" d="M56.8,28.75A27.63,27.63,0,0,1,52.3,44.1c-.58.9-.56.89.19,1.64,3.22,3.22,6.44,6.46,9.65,9.68,2.8,2.8,5.61,5.59,8.39,8.39a4.21,4.21,0,0,1,.23,5.91,4.39,4.39,0,0,1-5.28,1.53,4.59,4.59,0,0,1-1.46-1q-7-7-14-13.94c-1.43-1.43-2.88-2.85-4.3-4.29a.68.68,0,0,0-1-.12,26.25,26.25,0,0,1-9,4.08,27.9,27.9,0,0,1-8.2.77,27.36,27.36,0,0,1-12.11-3.52A27.25,27.25,0,0,1,2.92,38.48,27,27,0,0,1,2,22.41,27.67,27.67,0,0,1,21.4,2.31a27.68,27.68,0,0,1,10-1A27,27,0,0,1,44.7,6.1,27.49,27.49,0,0,1,55,19.08,28.44,28.44,0,0,1,56.8,28.75ZM28.92,9.35A19.66,19.66,0,1,0,48.68,28.89,19.67,19.67,0,0,0,28.92,9.35Z" fill="currentColor"/></svg>
                             </span>
-                            <input type="text" class="filter__search-input" placeholder="Search (tags, colour etc...)">
-                            <button type="button" class="filter__search-btn">
+                            <input type="text" class="filter__search-input" id="filter-search-input" placeholder="Search (tags, colour etc...)">
+                            <button type="button" class="filter__search-btn" id="filter-search-btn">
                                 <svg id="icon_bg_close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 35 35"><defs><style>.cls-1{fill:#313130;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><circle id="icon_bg_close-2" data-name="icon_bg_close" class="cls-1" cx="17.5" cy="17.5" r="17.5"/><polygon id="icon_overlay_close" class="cls-2" points="25.85 10.74 24.26 9.15 17.5 15.91 10.74 9.15 9.15 10.74 15.91 17.5 9.15 24.26 10.74 25.85 17.5 19.09 24.26 25.85 25.85 24.26 19.09 17.5 25.85 10.74"/></svg>
                             </button>
                         </div>

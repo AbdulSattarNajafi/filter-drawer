@@ -67,7 +67,7 @@ body {
 .desktop-filter {
     position: fixed;
     left: 50%;
-    bottom: 16px;
+    bottom: 7vh;
     transform: translateX(-50%);
     width: 420px;
     height: 0;
@@ -101,11 +101,21 @@ body {
 .desktop-filter__header-btn {
     position: absolute;
     top: 18px;
-    right: 34px;
+    top: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    width: 140px;
+    height: 66px;
     border: none;
+    background-color: transparent;
+    border-top-right-radius: 30px;
+    padding: 18px 34px 18px 0;
+}
+
+.desktop-filter__header-btn span {
+    display: inline-block;
     width: 30px;
     height: 30px;
     background-color: #bfbfbf;
@@ -150,7 +160,7 @@ body {
 .desktop-filter__buttons {
     position: fixed;
     left: 50%;
-    bottom: 16px;
+    bottom: 7vh;
     display: flex;
     align-items: center;
     width: 870px;
@@ -193,6 +203,17 @@ body {
 .desktop-filter__buttons-btn:focus {
     outline: none;
     box-shadow: none;
+}
+
+.desktop-filter-backdrop {
+    position: fixed;
+    inset: 0;
+    display: none;
+    background-color: transparent;
+    z-index: 555;
+}
+.desktop-filter-backdrop.show {
+    display: block;
 }
 
 /* ================== Tablet & Mobile Filter ================== */
@@ -419,6 +440,7 @@ body {
     align-items: center;
     font-size: 16px;
     padding: 15px 0;
+    cursor: pointer;
 }
 
 .filter__form-radio {
@@ -523,9 +545,8 @@ body {
     .desktop-search {
         display: none;
     }
-    .desktop-search.show {
-        opacity: 0;
-        visibility: hidden;
+    .desktop-filter-backdrop.show {
+        display: none;
     }
     .desktop-filter, 
     .desktop-filter__buttons {

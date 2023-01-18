@@ -1,8 +1,7 @@
 // Show & Hide Search on Scroll
 const desktopSearch = document.querySelector('.desktop-search ');
 
-window.addEventListener('scroll', (e) => {
-    console.log(window.scrollY);
+window.addEventListener('scroll', () => {
     if (window.scrollY > 550) {
         desktopSearch.classList.add('show');
     } else {
@@ -26,6 +25,7 @@ desktopSearchInput.addEventListener('keypress', (e) => {
 
 // ==================== Desktop Filter ==========================
 const desktopFilter = document.querySelector('.desktop-filter');
+const desktopFilterBackdrop = document.querySelector('.desktop-filter-backdrop');
 const desktopFilterBtns = document.querySelectorAll('.desktop-filter__buttons-btn');
 const desktopFilterContents = document.querySelectorAll('.desktop-filters');
 const desktopFilterCloseBtns = document.querySelectorAll('.desktop-filter__header-btn');
@@ -35,10 +35,24 @@ desktopFilterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         const currentFilter = document.querySelector(`.${btn.dataset.id}`);
 
-        if (!desktopFilter.classList.contains('show')) {
+        // Checking if the button is clicked again
+        if (!currentFilter.classList.contains('hide') && desktopFilter.classList.contains('show')) {
+            hideDesktopFilter();
+        } else if (
+            !currentFilter.classList.contains('hide') &&
+            !desktopFilter.classList.contains('show')
+        ) {
             desktopFilter.classList.add('show');
+            desktopFilterBackdrop.classList.add('show');
+        } else if (
+            currentFilter.classList.contains('hide') &&
+            !desktopFilter.classList.contains('show')
+        ) {
+            desktopFilter.classList.add('show');
+            desktopFilterBackdrop.classList.add('show');
         }
 
+        // Checking the current Filter
         if (!currentFilter.classList.contains('hide')) return;
 
         desktopFilterContents.forEach((content) => {
@@ -51,10 +65,15 @@ desktopFilterBtns.forEach((btn) => {
 
 // Hide Desktop Filter Drawer
 desktopFilterCloseBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        desktopFilter.classList.remove('show');
-    });
+    btn.addEventListener('click', hideDesktopFilter);
 });
+
+desktopFilterBackdrop.addEventListener('click', hideDesktopFilter);
+
+function hideDesktopFilter() {
+    desktopFilter.classList.remove('show');
+    desktopFilterBackdrop.classList.remove('show');
+}
 
 // ==================== Tablet & Mobile Filter ==================
 
